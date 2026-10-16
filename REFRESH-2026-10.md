@@ -42,3 +42,24 @@ Instagram: vetor de marca da Simple Icons (`icons/instagram.svg`, licença CC0).
 - Movimento reduzido e navegação móvel.
 
 Deploy de produção autorizado pelo cliente, com commit enviado para `main`.
+
+## Segunda rodada — 16/10/2026
+
+- As galerias da Home e A GLX passaram a ter as mesmas 20 fotos, todas também disponíveis no celular. Removida a regra antiga que escondia as fotos após a nona.
+- Foto grande de Nossa história substituída por Casa Provence com piscina e paisagismo; capa de Construtora substituída por outra vista da mesma residência.
+- A seção Escopo usa imagens com posicionamento absoluto no contêiner, impedindo que a dimensão intrínseca vertical da foto estique a seção. Layout verificado em desktop de 1920px e celular.
+- Seis imagens ilustrativas recriadas com homens e linguagem documental; quatro imagens próprias adicionadas aos compromissos de A GLX.
+- Novos arquivos com sufixo `-v2` para evitar que o cache do navegador retenha as imagens anteriores.
+
+Gerações no Magnific / Seedream 5 Pro, 2K, 16:9 (1.000 créditos):
+
+- Levantamento: https://www.magnific.com/app/creation/8aUH3y2IrU
+- Planejamento: https://www.magnific.com/app/creation/xSWPoDkjfW
+- Campo: https://www.magnific.com/app/creation/0eKtwloTfW
+- Entrega: https://www.magnific.com/app/creation/SyD3vtAUb8
+- Engenharia: https://www.magnific.com/app/creation/Lw09IoVswO
+- Escopo: https://www.magnific.com/app/creation/Tdkm7wUVNR
+- Critério técnico: https://www.magnific.com/app/creation/KLG7eeIkqp
+- Informação acessível: https://www.magnific.com/app/creation/s7TNtm5l8e
+- Responsabilidade clara: https://www.magnific.com/app/creation/3zaVkxZREY
+- Segurança: https://www.magnific.com/app/creation/KLG7eovkqp

@@ -18,6 +18,17 @@ export const gallery = [
   ['provence-3', 'Integração entre varanda, madeira e paisagismo'],
   ['site-10', 'Armação de aço preparada para concretagem'],
   ['prime-1', 'Entrada iluminada do Prime Center'],
+  ['site-45', 'Fachada comercial dos Supermercados Avenida'],
+  ['borba-1', 'Fachada da Clínica Borba'],
+  ['ioa-6', 'Detalhe da fachada do IOA'],
+  ['ioa-7', 'Recepção do IOA'],
+  ['prime-2', 'Arquitetura e paisagismo do empreendimento Prime'],
+  ['athia-3', 'Fachada da ATHIA vista da rua'],
+  ['bermejo-1', 'Acesso e fachada do empreendimento Bermejo'],
+  ['site-14', 'Edificação industrial da AGI'],
+  ['site-24', 'Estrutura e pilares de construção em andamento'],
+  ['site-12', 'Estrutura de silo e instalações industriais'],
+  ['site-16', 'Interior de ambiente corporativo finalizado'],
 ].map(([name, alt]) => ({ src: `/media/refresh/${name}.webp`, alt }));
 
 export const brands = [
@@ -33,7 +44,7 @@ export const services = [
   {
     number: '01', title: 'Construtora', href: '/construtora', icon: Building2,
     text: 'A GLX assume a execução completa da obra, coordenando orçamento, fornecedores, equipes, cronograma e controle de qualidade até a entrega final.',
-    image: '/media/refresh/site-23.webp',
+    image: '/media/refresh/provence-2.webp',
   },
   {
     number: '02', title: 'Gestão de obras', href: '/gestao-de-obras', icon: ClipboardCheck,
@@ -65,8 +76,8 @@ export const servicePages = {
   construtora: {
     eyebrow: 'Execução completa', title: 'Uma equipe cuida da obra do terreno à entrega.',
     intro: 'A GLX assume a obra por completo: orçamento, contratações, execução e documentação, tudo sob um único contrato. Você acompanha as decisões sem precisar coordenar cada fornecedor.',
-    image: '/media/refresh/site-23.webp', interest: 'Construtora, execução completa',
-    scopeImage: '/media/refresh/ai-delivery.webp',
+    image: '/media/refresh/provence-2.webp', interest: 'Construtora, execução completa',
+    scopeImage: '/media/refresh/ai-delivery-v2.webp',
     stepImages: ['survey', 'planning', 'field', 'delivery'],
     introTitle: 'Você contrata uma vez. A GLX resolve tudo.',
     introCopy: 'Antes do trabalho começar, a GLX define o que está incluído, quem responde por cada etapa e como as decisões serão apresentadas. Em regime de empreitada global, materiais, mão de obra e execução ficam sob uma única responsabilidade.',
@@ -85,8 +96,8 @@ export const servicePages = {
   engenharia: {
     eyebrow: 'Engenharia e projetos', title: 'Um bom projeto reduz custos e riscos antes do canteiro.',
     intro: 'A GLX desenvolve e compatibiliza as soluções técnicas que orientam orçamento, contratação, execução e aprovação da obra.',
-    image: '/media/refresh/ai-engineering.webp', interest: 'Engenharia e projetos',
-    scopeImage: '/media/refresh/ai-scope.webp',
+    image: '/media/refresh/ai-engineering-v2.webp', interest: 'Engenharia e projetos',
+    scopeImage: '/media/refresh/ai-scope-v2.webp',
     stepImages: ['survey', 'planning', 'engineering', 'scope'],
     introTitle: 'Cada atividade, prevista antes de virar problema.',
     introCopy: 'A GLX elabora os projetos complementares — estrutural, elétrico, hidrossanitário, SPDA, entre outros — com precisão técnica e total aderência às normas. Cada detalhe é resolvido no papel, para que a obra não precise improvisar no canteiro.',
