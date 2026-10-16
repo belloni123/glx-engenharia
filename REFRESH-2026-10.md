@@ -63,3 +63,8 @@ Gerações no Magnific / Seedream 5 Pro, 2K, 16:9 (1.000 créditos):
 - Informação acessível: https://www.magnific.com/app/creation/s7TNtm5l8e
 - Responsabilidade clara: https://www.magnific.com/app/creation/3zaVkxZREY
 - Segurança: https://www.magnific.com/app/creation/KLG7eovkqp
+
+## Terceira rodada — galeria uniforme
+
+- Home e A GLX usam a mesma grade de 20 miniaturas quadradas: três colunas no desktop, duas no tablet e uma no celular, com espaçamento uniforme.
+- Clique abre diálogo com a foto inteira, sem corte e na proporção original. Link para o arquivo em tamanho real, navegação por setas/teclado/gesto lateral, Escape e restauração de foco.

@@ -3,6 +3,7 @@ import { Fragment } from 'react';
 import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react';
 import { brands, gallery } from '../site-data';
 import { LeadButton, Reveal, TransitionLink } from './experience';
+import { PhotoGallery } from './photo-gallery';
 
 export function BalancedText({ children }: { children: string }) {
   const words = children.trim().split(/\s+/);
@@ -37,13 +38,7 @@ export function BrandRail({ theme = 'light' }: { theme?: 'light' | 'dark' }) {
 }
 
 export function Gallery() {
-  return (
-    <section className="gallery-section" aria-label="Galeria de obras e ambientes">
-      <div className="gallery-grid">
-        {gallery.map((item, index) => <Reveal className={`gallery-item item-${(index % 7) + 1}`} key={item.src}><Image src={item.src} alt={item.alt} fill sizes="(max-width: 640px) 100vw, 50vw" /></Reveal>)}
-      </div>
-    </section>
-  );
+  return <PhotoGallery images={gallery} />;
 }
 
 export function FinalCta({ title = 'Conte o momento da sua obra.', interest = 'Iniciar projeto' }: { title?: string; interest?: string }) {
