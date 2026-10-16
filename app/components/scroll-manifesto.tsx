@@ -75,7 +75,7 @@ export function ScrollManifesto() {
           </h2>
         </div>
         <div className="manifesto-photo" aria-hidden="true">
-          <Image src="/media/luxury-residence-construction.jpg" alt="" fill sizes="(max-width: 640px) 100vw, 70vw" />
+          <Image src="/media/refresh/site-23.webp" alt="Estrutura metálica de uma construção em andamento" fill sizes="(max-width: 640px) 100vw, 70vw" />
         </div>
         <div className="manifesto-counter" aria-hidden="true"><span>01</span><i /><span>02</span></div>
       </div>

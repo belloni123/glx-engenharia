@@ -22,7 +22,7 @@ const partnerAreas = [
 export default function PartnerPage() {
   return (
     <PageShell>
-      <InteriorHero index="08" eyebrow="Empresas parceiras" title="Parceiros certos. Obras melhores." copy="Fornecedores, projetistas, consultores e equipes especializadas podem apresentar estrutura, região de atendimento e experiência para futuras demandas da GLX." image="/media/project-20.jpg" />
+      <InteriorHero index="08" eyebrow="Empresas parceiras" title="Parceiros certos. Obras melhores." copy="Fornecedores, projetistas, consultores e equipes especializadas podem apresentar estrutura, região de atendimento e experiência para futuras demandas da GLX." image="/media/refresh/bermejo-1.webp" />
       <section className="career-intro partner-intro section-dark">
         <div><p className="kicker">Como avaliamos</p><h2>O cadastro abre a conversa. A obra confirma a parceria.</h2></div>
         <div><p>A equipe verifica capacidade de atendimento, documentação, segurança, qualidade e histórico de entrega conforme a necessidade de cada projeto.</p><div className="culture-list"><span>Portfólio e referências</span><span>Comunicação durante o serviço</span><span>Compromisso com o combinado</span><span>Documentação em dia</span></div></div>
@@ -30,15 +30,15 @@ export default function PartnerPage() {
       <section className="partner-showcase section-paper">
         <SectionHeading kicker="Trabalho em conjunto" title="Cada especialidade entra na hora certa." copy="Projetistas, fornecedores, consultores e executores participam conforme o escopo e o momento de cada obra." />
         <div className="partner-showcase-grid">
-          <Reveal className="partner-showcase-image partner-showcase-wide"><Image src="/media/luxury-residence-construction.jpg" alt="Estrutura de residência de alto padrão com equipes atuando no canteiro" fill sizes="(max-width: 700px) 100vw, 64vw" /><span>Execução coordenada</span></Reveal>
-          <Reveal className="partner-showcase-image"><Image src="/media/project-19.jpg" alt="Projeto técnico com medidas e detalhamento executivo" fill sizes="(max-width: 700px) 100vw, 36vw" /><span>Compatibilização</span></Reveal>
-          <Reveal className="partner-showcase-image"><Image src="/media/project-14.jpg" alt="Ambiente residencial finalizado com marcenaria e iluminação" fill sizes="(max-width: 700px) 100vw, 36vw" /><span>Acabamento entregue</span></Reveal>
+          <Reveal className="partner-showcase-image partner-showcase-wide"><Image src="/media/refresh/site-23.webp" alt="Estrutura metálica de obra em andamento" fill sizes="(max-width: 700px) 100vw, 64vw" /></Reveal>
+          <Reveal className="partner-showcase-image"><Image src="/media/refresh/site-10.webp" alt="Armação de aço preparada para concretagem" fill sizes="(max-width: 700px) 100vw, 36vw" /></Reveal>
+          <Reveal className="partner-showcase-image"><Image src="/media/refresh/provence-3.webp" alt="Varanda finalizada integrada ao paisagismo" fill sizes="(max-width: 700px) 100vw, 36vw" /></Reveal>
         </div>
       </section>
       <section className="partner-areas section-dark">
         <SectionHeading dark kicker="Quem pode participar" title="Empresas que ajudam a obra a avançar." copy="O cadastro é aberto a empresas de diferentes portes. A equipe analisa a compatibilidade com cada oportunidade." />
         <div className="partner-areas-grid">
-          {partnerAreas.map((area, index) => <Reveal key={area.title}><span>{String(index + 1).padStart(2, '0')}</span><area.icon /><h3>{area.title}</h3><p>{area.text}</p></Reveal>)}
+          {partnerAreas.map((area, index) => <Reveal key={area.title}><Image src={`/media/refresh/${['site-16', 'site-23', 'provence-3', 'site-12', 'site-24', 'provence-1'][index]}.webp`} alt="" fill sizes="(max-width: 700px) 100vw, 33vw" /><div className="partner-area-shade" /><span>{String(index + 1).padStart(2, '0')}</span><area.icon /><h3>{area.title}</h3><p>{area.text}</p></Reveal>)}
         </div>
       </section>
       <section className="career-form-section partner-form-section section-paper">

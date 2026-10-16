@@ -38,4 +38,5 @@ tsconfig.tsbuildinfo
 /dist/
 /.wrangler/
 /outputs/
+/output/
 /work/

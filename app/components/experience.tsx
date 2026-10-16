@@ -83,7 +83,7 @@ function MenuOverlay({ open, close }: { open: boolean; close: () => void }) {
           <TransitionLink key={item.href} href={item.href} onClick={close}><span>0{index + 1}</span>{item.label}<ArrowRight /></TransitionLink>
         ))}
         <details className="menu-contact-group" open>
-          <summary><span>06</span>Contato<ChevronDown /></summary>
+          <summary><span>07</span>Contato<ChevronDown /></summary>
           <div>
             {contactItems.map((item) => <TransitionLink key={item.href} href={item.href} onClick={close}>{item.label}<ArrowRight /></TransitionLink>)}
           </div>
