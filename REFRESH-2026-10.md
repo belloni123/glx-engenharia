@@ -68,3 +68,4 @@ Gerações no Magnific / Seedream 5 Pro, 2K, 16:9 (1.000 créditos):
 
 - Home e A GLX usam a mesma grade de 20 miniaturas quadradas: três colunas no desktop, duas no tablet e uma no celular, com espaçamento uniforme.
 - Clique abre diálogo com a foto inteira, sem corte e na proporção original. Link para o arquivo em tamanho real, navegação por setas/teclado/gesto lateral, Escape e restauração de foco.
+- Cards do Portfólio mostram resumo de até 200 caracteres, sem cortar palavras, limitado visualmente a três linhas com altura fixa. O diálogo mantém a descrição integral, inclusive quebras de parágrafo.

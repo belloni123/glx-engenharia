@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { ArrowLeft, ArrowRight, Plus, X } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { portfolioCases, type PortfolioCase } from './portfolio-data';
+import { caseExcerpt } from './portfolio-excerpt';
 
 export function PortfolioGrid() {
   const dialog = useRef<HTMLDialogElement>(null);
@@ -39,14 +40,14 @@ export function PortfolioGrid() {
   }
 
   return <section className="portfolio-section section-paper" id="cases">
-    <div className="portfolio-toolbar"><p>Uma seleção de trabalhos</p><div role="group" aria-label="Filtrar trabalhos por serviço">{['Todos', 'Construtora', 'Gestão de obras', 'Engenharia'].map(category => <button type="button" key={category} aria-pressed={filter === category} onClick={() => setFilter(category)}>{category}</button>)}</div></div>
+    <div className="portfolio-toolbar"><p>Filtre por categoria</p><div role="group" aria-label="Filtrar trabalhos por serviço">{['Todos', 'Construtora', 'Gestão de obras', 'Engenharia'].map(category => <button type="button" key={category} aria-pressed={filter === category} onClick={() => setFilter(category)}>{category}</button>)}</div></div>
     <div className="portfolio-grid">{visible.map(item => <article className="portfolio-card" key={item.slug}>
       <button type="button" className="portfolio-cover" onClick={event => open(item, event.currentTarget)} aria-label={`Ver case ${item.title}`}>
         <Image src={item.images[0].src} alt={item.images[0].alt} fill sizes="(max-width: 700px) 100vw, 50vw" />
         <span className="portfolio-open"><Plus aria-hidden="true" /><span>Ver trabalho</span></span>
       </button>
       <div className="portfolio-card-heading"><h2>{item.title}</h2><span className="portfolio-tag">{item.category}</span></div>
-      <p>{item.description}</p>
+      <p className="portfolio-excerpt">{caseExcerpt(item.description)}</p>
     </article>)}</div>
     <p className="portfolio-editorial-note">Descrições e categorias em revisão editorial. Fotografias do acervo fornecido à GLX.</p>
     <dialog ref={dialog} className="portfolio-dialog" aria-labelledby="case-title" onClose={afterClose} onClick={event => { if (event.target === event.currentTarget) close(); }} onKeyDown={event => { if (event.key === 'ArrowRight') move(1); if (event.key === 'ArrowLeft') move(-1); }}>
