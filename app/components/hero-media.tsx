@@ -38,9 +38,9 @@ export function HeroMedia() {
         loop
         playsInline
         preload="none"
-        poster="/media/hero-ioa-tour-v2.jpg"
+        poster="/media/hero-ioa-seedance-v3.jpg"
       >
-        <source src="/media/hero-ioa-tour-v2.mp4" type="video/mp4" />
+        <source src="/media/hero-ioa-seedance-v3.mp4" type="video/mp4" />
       </video>
     </div>
   );

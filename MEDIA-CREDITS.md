@@ -6,9 +6,9 @@ As mídias desta versão servem para composição visual e devem ser substituíd
 
 Tour do Espaço IOA / Villa Salvi Café, produzido a partir das fotografias fornecidas pelo cliente e publicado por solicitação do responsável pelo site.
 
-Arquivo: `public/media/hero-ioa-tour-v2.mp4`. Pôster: `public/media/hero-ioa-tour-v2.jpg`.
+Versão atual: três takes novos gerados no Magnific com Seedance 2.5, reunidos em `public/media/hero-ioa-seedance-v3.mp4`. Pôster: `public/media/hero-ioa-seedance-v3.jpg`. Montagem local com dissolvências curtas, loop cíclico e grão sutil.
 
-Trechos gerados no Magnific/Kling 3.0 e montagem local com plano estável do café, transições discretas e grão leve. O vídeo substitui as duas cenas provisórias do Pexels anteriormente exibidas na hero.
+A versão `public/media/hero-ioa-tour-v2.mp4` foi preservada para comparação, junto de seu pôster. Ela contém trechos Kling 3.0 e um plano estável do café.
 
 ## Fotografias
 
