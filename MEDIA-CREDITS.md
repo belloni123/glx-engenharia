@@ -2,15 +2,13 @@
 
 As mídias desta versão servem para composição visual e devem ser substituídas pelo acervo oficial da GLX antes da aprovação final do portfólio.
 
-## Vídeos da hero
+## Vídeo da hero
 
-Pexels, vídeo 7646496, Happy Family Moving in a New House, autora Alena Darmel:
-https://www.pexels.com/video/happy-family-moving-in-a-new-house-7646496/
+Tour do Espaço IOA / Villa Salvi Café, produzido a partir das fotografias fornecidas pelo cliente e publicado por solicitação do responsável pelo site.
 
-Pexels, vídeo 8725954, A Family Looking at a Blueprint, autora Kampus Production:
-https://www.pexels.com/video/a-family-looking-at-a-blueprint-8725954/
+Arquivo: `public/media/hero-ioa-tour-v2.mp4`. Pôster: `public/media/hero-ioa-tour-v2.jpg`.
 
-O arquivo `public/media/hero-familia-planta.mp4` usa a versão Full HD disponibilizada pelo Pexels e compõe a segunda cena da hero.
+Trechos gerados no Magnific/Kling 3.0 e montagem local com plano estável do café, transições discretas e grão leve. O vídeo substitui as duas cenas provisórias do Pexels anteriormente exibidas na hero.
 
 ## Fotografias
 

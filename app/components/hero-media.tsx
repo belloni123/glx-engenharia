@@ -1,50 +1,47 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-
-const scenes = [
-  { src: '/media/hero-familia.mp4', className: 'hero-scene-family', rate: 0.58, preload: 'auto' as const },
-  { src: '/media/hero-familia-planta.mp4', className: 'hero-scene-planning', rate: 1, preload: 'metadata' as const },
-];
+import { useEffect, useRef } from 'react';
 
 export function HeroMedia() {
-  const videos = useRef<Array<HTMLVideoElement | null>>([]);
-  const [activeScene, setActiveScene] = useState(0);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
-    videos.current.forEach((video, index) => {
-      if (video) video.playbackRate = scenes[index].rate;
-    });
-  }, []);
+    const video = videoRef.current;
+    if (!video) return;
 
-  function showNextScene(currentScene: number) {
-    const nextScene = (currentScene + 1) % scenes.length;
-    const nextVideo = videos.current[nextScene];
-    if (nextVideo) {
-      nextVideo.currentTime = 0;
-      nextVideo.playbackRate = scenes[nextScene].rate;
-      void nextVideo.play().catch(() => undefined);
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    function syncPlayback() {
+      if (!video) return;
+      if (reducedMotion.matches || document.hidden) {
+        video.pause();
+      } else {
+        void video.play().catch(() => undefined);
+      }
     }
-    setActiveScene(nextScene);
-  }
+
+    syncPlayback();
+    reducedMotion.addEventListener('change', syncPlayback);
+    document.addEventListener('visibilitychange', syncPlayback);
+    return () => {
+      reducedMotion.removeEventListener('change', syncPlayback);
+      document.removeEventListener('visibilitychange', syncPlayback);
+      video.pause();
+    };
+  }, []);
 
   return (
     <div className="hero-media" aria-hidden="true">
-      {scenes.map((scene, index) => (
-        <video
-          key={scene.src}
-          ref={(element) => { videos.current[index] = element; }}
-          className={`hero-media-video ${scene.className} ${activeScene === index ? 'is-active' : ''}`}
-          autoPlay={index === 0}
-          muted
-          playsInline
-          preload={scene.preload}
-          poster={index === 0 ? '/media/hero-familia.jpg' : undefined}
-          onEnded={() => showNextScene(index)}
-        >
-          <source src={scene.src} type="video/mp4" />
-        </video>
-      ))}
+      <video
+        ref={videoRef}
+        className="hero-media-video"
+        muted
+        loop
+        playsInline
+        preload="none"
+        poster="/media/hero-ioa-tour-v2.jpg"
+      >
+        <source src="/media/hero-ioa-tour-v2.mp4" type="video/mp4" />
+      </video>
     </div>
   );
 }

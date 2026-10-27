@@ -2,24 +2,11 @@
 
 ## Hero da home
 
-Arquivo temporário: `public/media/hero-familia.mp4`
+- Vídeo: `public/media/hero-ioa-tour-v2.mp4`
+- Pôster: `public/media/hero-ioa-tour-v2.jpg`
+- Origem: fotos do Espaço IOA / Villa Salvi Café fornecidas pelo cliente no pacote `tour_IOA_horizontal.zip`.
+- Produção: trechos 1 e 3 gerados no Magnific/Kling 3.0; plano estável do café, montagem, transições e grão discreto aplicados localmente.
+- Formato: H.264, 1920×1080, 24 fps, 17,08 segundos, sem faixa de áudio, cerca de 6,24 MB, otimizado para reprodução no site.
+- A hero usa um único vídeo em loop, na velocidade original, e exibe o pôster quando o usuário prefere movimento reduzido.
 
-Fonte: Pexels
-
-Autor: Alena Darmel
-
-Página original: https://www.pexels.com/video/happy-family-moving-in-a-new-house-7646496/
-
-Licença indicada na página: uso gratuito
-
-Este vídeo compõe a hero enquanto o material Premium de referência não estiver licenciado e disponível no projeto.
-
-Arquivo da segunda cena: `public/media/hero-familia-planta.mp4`
-
-Fonte: Pexels
-
-Autor: Kampus Production
-
-Página original: https://www.pexels.com/video/a-family-looking-at-a-blueprint-8725954/
-
-Licença indicada na página: uso gratuito
+Os arquivos antigos de família e construção permanecem no histórico/acervo do repositório, sem uso pela hero.
