@@ -1,49 +1,166 @@
-import type { Metadata } from 'next';
-import Image from 'next/image';
-import { Cpu, DraftingCompass, HardHat, PackageCheck, Trees, Truck } from 'lucide-react';
-import { PartnerForm } from '../components/partner-form';
-import { Reveal } from '../components/experience';
-import { BalancedText, InteriorHero, PageShell, SectionHeading } from '../components/sections';
+import type { Metadata } from "next";
+import Image from "next/image";
+import {
+  Cpu,
+  DraftingCompass,
+  HardHat,
+  PackageCheck,
+  Trees,
+  Truck,
+} from "lucide-react";
+import { ContactChannels } from "../components/contact-channels";
+import { Reveal } from "../components/experience";
+import {
+  BalancedText,
+  InteriorHero,
+  PageShell,
+  SectionHeading,
+} from "../components/sections";
 
 export const metadata: Metadata = {
-  title: 'Seja uma empresa parceira',
-  description: 'Apresente sua empresa, seus produtos ou serviços para futuras oportunidades de parceria com a GLX Engenharia.',
+  title: "Seja uma empresa parceira",
+  description:
+    "Apresente sua empresa, seus produtos ou serviços para futuras oportunidades de parceria com a GLX Engenharia.",
 };
 
 const partnerAreas = [
-  { icon: DraftingCompass, title: 'Projetos e consultoria', text: 'Arquitetura, estrutura, instalações, compatibilização e especialidades técnicas.' },
-  { icon: HardHat, title: 'Execução especializada', text: 'Equipes e empresas com domínio técnico, segurança e responsabilidade pela entrega.' },
-  { icon: PackageCheck, title: 'Materiais e acabamentos', text: 'Fornecedores que unem procedência, disponibilidade, desempenho e suporte.' },
-  { icon: Truck, title: 'Equipamentos e logística', text: 'Soluções para locação, transporte, movimentação e produtividade no canteiro.' },
-  { icon: Cpu, title: 'Tecnologia para construção', text: 'Ferramentas que aumentam controle, integração, rastreabilidade e precisão.' },
-  { icon: Trees, title: 'Paisagismo e exteriores', text: 'Especialistas em áreas externas, iluminação, vegetação e acabamento ambiental.' },
+  {
+    icon: DraftingCompass,
+    title: "Projetos e consultoria",
+    text: "Arquitetura, estrutura, instalações, compatibilização e especialidades técnicas.",
+  },
+  {
+    icon: HardHat,
+    title: "Execução especializada",
+    text: "Equipes e empresas com domínio técnico, segurança e responsabilidade pela entrega.",
+  },
+  {
+    icon: PackageCheck,
+    title: "Materiais e acabamentos",
+    text: "Fornecedores que unem procedência, disponibilidade, desempenho e suporte.",
+  },
+  {
+    icon: Truck,
+    title: "Equipamentos e logística",
+    text: "Soluções para locação, transporte, movimentação e produtividade no canteiro.",
+  },
+  {
+    icon: Cpu,
+    title: "Tecnologia para construção",
+    text: "Ferramentas que aumentam controle, integração, rastreabilidade e precisão.",
+  },
+  {
+    icon: Trees,
+    title: "Paisagismo e exteriores",
+    text: "Especialistas em áreas externas, iluminação, vegetação e acabamento ambiental.",
+  },
 ];
 
 export default function PartnerPage() {
   return (
     <PageShell>
-      <InteriorHero index="08" eyebrow="Empresas parceiras" title="Parceiros certos. Obras melhores." copy="Fornecedores, projetistas, consultores e equipes especializadas podem apresentar estrutura, região de atendimento e experiência para futuras demandas da GLX." image="/media/refresh/bermejo-1.webp" />
+      <InteriorHero
+        mobileTitle="Parceiros certos.|Obras melhores."
+        index="08"
+        eyebrow="Empresas parceiras"
+        title="Parceiros certos. Obras melhores."
+        copy="Fornecedores, projetistas, consultores e equipes especializadas podem apresentar estrutura, região de atendimento e experiência para futuras demandas da GLX."
+        image="/media/refresh/bermejo-1.webp"
+      />
       <section className="career-intro partner-intro section-dark">
-        <div><p className="kicker">Como avaliamos</p><h2>O cadastro abre a conversa. A obra confirma a parceria.</h2></div>
-        <div><p>A equipe verifica capacidade de atendimento, documentação, segurança, qualidade e histórico de entrega conforme a necessidade de cada projeto.</p><div className="culture-list"><span>Portfólio e referências</span><span>Comunicação durante o serviço</span><span>Compromisso com o combinado</span><span>Documentação em dia</span></div></div>
+        <div>
+          <p className="kicker">Como avaliamos</p>
+          <h2>O contato abre a conversa. A obra confirma a parceria.</h2>
+        </div>
+        <div>
+          <p>
+            A equipe verifica capacidade de atendimento, documentação,
+            segurança, qualidade e histórico de entrega conforme a necessidade
+            de cada projeto.
+          </p>
+          <div className="culture-list">
+            <span>Portfólio e referências</span>
+            <span>Comunicação durante o serviço</span>
+            <span>Compromisso com o combinado</span>
+            <span>Documentação em dia</span>
+          </div>
+        </div>
       </section>
       <section className="partner-showcase section-paper">
-        <SectionHeading kicker="Trabalho em conjunto" title="Cada especialidade entra na hora certa." copy="Projetistas, fornecedores, consultores e executores participam conforme o escopo e o momento de cada obra." />
+        <SectionHeading
+          kicker="Trabalho em conjunto"
+          title="Cada especialidade entra na hora certa."
+          copy="Projetistas, fornecedores, consultores e executores participam conforme o escopo e o momento de cada obra."
+        />
         <div className="partner-showcase-grid">
-          <Reveal className="partner-showcase-image partner-showcase-wide"><Image src="/media/refresh/site-23.webp" alt="Estrutura metálica de obra em andamento" fill sizes="(max-width: 700px) 100vw, 64vw" /></Reveal>
-          <Reveal className="partner-showcase-image"><Image src="/media/refresh/site-10.webp" alt="Armação de aço preparada para concretagem" fill sizes="(max-width: 700px) 100vw, 36vw" /></Reveal>
-          <Reveal className="partner-showcase-image"><Image src="/media/refresh/provence-3.webp" alt="Varanda finalizada integrada ao paisagismo" fill sizes="(max-width: 700px) 100vw, 36vw" /></Reveal>
+          <Reveal className="partner-showcase-image partner-showcase-wide">
+            <Image
+              src="/media/refresh/site-23.webp"
+              alt="Estrutura metálica de obra em andamento"
+              fill
+              sizes="(max-width: 700px) 100vw, 64vw"
+            />
+          </Reveal>
+          <Reveal className="partner-showcase-image">
+            <Image
+              src="/media/refresh/site-10.webp"
+              alt="Armação de aço preparada para concretagem"
+              fill
+              sizes="(max-width: 700px) 100vw, 36vw"
+            />
+          </Reveal>
+          <Reveal className="partner-showcase-image">
+            <Image
+              src="/media/refresh/provence-3.webp"
+              alt="Varanda finalizada integrada ao paisagismo"
+              fill
+              sizes="(max-width: 700px) 100vw, 36vw"
+            />
+          </Reveal>
         </div>
       </section>
       <section className="partner-areas section-dark">
-        <SectionHeading dark kicker="Quem pode participar" title="Empresas que ajudam a obra a avançar." copy="O cadastro é aberto a empresas de diferentes portes. A equipe analisa a compatibilidade com cada oportunidade." />
+        <SectionHeading
+          dark
+          kicker="Quem pode participar"
+          title="Empresas que ajudam a obra a avançar."
+          copy="O contato é aberto a empresas de diferentes portes. A equipe analisa a compatibilidade com cada oportunidade."
+        />
         <div className="partner-areas-grid">
-          {partnerAreas.map((area, index) => <Reveal key={area.title}><Image src={`/media/refresh/${['site-16', 'site-23', 'provence-3', 'site-12', 'site-24', 'provence-1'][index]}.webp`} alt="" fill sizes="(max-width: 700px) 100vw, 33vw" /><div className="partner-area-shade" /><span>{String(index + 1).padStart(2, '0')}</span><area.icon /><h3>{area.title}</h3><p>{area.text}</p></Reveal>)}
+          {partnerAreas.map((area, index) => (
+            <Reveal key={area.title}>
+              <Image
+                src={`/media/refresh/${["site-16", "site-23", "provence-3", "site-12", "site-24", "provence-1"][index]}.webp`}
+                alt=""
+                fill
+                sizes="(max-width: 700px) 100vw, 33vw"
+              />
+              <div className="partner-area-shade" />
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <area.icon />
+              <h3>{area.title}</h3>
+              <p>{area.text}</p>
+            </Reveal>
+          ))}
         </div>
       </section>
       <section className="career-form-section partner-form-section section-paper">
-        <div className="career-form-heading"><p className="kicker">Cadastro de empresa</p><h2><BalancedText>Mostre onde sua equipe pode contribuir.</BalancedText></h2><p>Informe região de atendimento, especialidade e experiência. O cadastro não cria obrigação de contratação e poderá ser consultado em demandas atuais ou futuras.</p></div>
-        <PartnerForm />
+        <div className="career-form-heading">
+          <p className="kicker">Contato para parcerias</p>
+          <h2>
+            <BalancedText>Mostre onde sua equipe pode contribuir.</BalancedText>
+          </h2>
+          <p>
+            Envie sua apresentação por e-mail para contato@glxengenharia.com.br
+            ou pelo WhatsApp, com região de atendimento, especialidade e
+            experiência. O contato não cria obrigação de contratação e poderá
+            ser consultado em demandas atuais ou futuras.
+          </p>
+        </div>
+        <ContactChannels
+          email="contato@glxengenharia.com.br"
+          subject="Parceria com a GLX"
+        />
       </section>
     </PageShell>
   );

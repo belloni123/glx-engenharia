@@ -2,7 +2,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
-background = Image.open(ROOT / "public/media/project-01.jpg").convert("RGB")
+background = Image.open(ROOT / "public/media/portfolio/ioa/01.webp").convert("RGB")
 logo = Image.open(ROOT / "public/brand/glx-logo.png").convert("RGBA")
 
 canvas = Image.new("RGB", (1200, 630), "#0b0b0c")
