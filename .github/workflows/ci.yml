@@ -21,3 +21,9 @@ jobs:
       - run: pnpm format:check
       - run: pnpm build
       - run: pnpm check:assets
+      - run: pnpm build:hostgator
+      - uses: actions/upload-artifact@v4
+        with:
+          name: glx-hostgator
+          path: dist/glx-hostgator.zip
+          if-no-files-found: error

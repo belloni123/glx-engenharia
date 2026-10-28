@@ -42,3 +42,36 @@ else
   console.log(
     `${assets.size} referências de mídia verificadas, incluindo as geradas no build.`,
   );
+
+if (process.argv.includes("--static")) {
+  for (const route of [
+    "",
+    "a-glx",
+    "construtora",
+    "gestao-de-obras",
+    "engenharia",
+    "portfolio",
+    "orcamento",
+    "trabalhe-conosco",
+    "seja-parceiro",
+    "privacidade",
+    "termos",
+  ]) {
+    const file = path.join("out", route, "index.html");
+    await access(file);
+    const html = await readFile(file, "utf8");
+    if (html.includes("/_next/image?"))
+      throw new Error(`Imagem depende de servidor Next.js: ${file}`);
+  }
+  for (const asset of assets) await access(path.join("out", asset));
+  for (const file of [
+    "out/404.html",
+    "out/.htaccess",
+    "out/robots.txt",
+    "out/sitemap.xml",
+  ])
+    await access(file);
+  console.log(
+    "Exportação HostGator validada: páginas com index.html e mídias locais.",
+  );
+}

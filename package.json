@@ -13,7 +13,8 @@
     "typecheck": "tsc --noEmit",
     "format": "prettier --write app scripts/*.mjs *.ts *.json *.md docs .github",
     "format:check": "prettier --check app scripts/*.mjs *.ts *.json *.md docs .github",
-    "check:assets": "node scripts/check-assets.mjs"
+    "check:assets": "node scripts/check-assets.mjs",
+    "build:hostgator": "node scripts/build-hostgator.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.37.0",

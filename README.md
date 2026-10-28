@@ -22,7 +22,31 @@ pnpm build
 pnpm check:assets
 ```
 
-A checagem de mídia deve rodar após o build, pois também examina as URLs geradas nas páginas estáticas. `pnpm start` serve o build de produção.
+A checagem de mídia deve rodar após o build, pois também examina as URLs geradas nas páginas estáticas. `pnpm start` serve o build padrão de produção da Vercel. Para a versão estática da HostGator, use um servidor de arquivos conforme descrito abaixo.
+
+## Publicar na HostGator
+
+Baixe o arquivo **glx-hostgator.zip** na área de [Releases do GitHub](https://github.com/belloni123/glx-engenharia/releases). Ele contém o site já compilado, incluindo `index.html`, páginas, estilos, JavaScript, fontes, fotos e vídeos. O ZIP de código-fonte do botão “Code” do GitHub não é o pacote para hospedagem.
+
+1. No Gerenciador de Arquivos do cPanel, abra `public_html` para o domínio principal, ou a raiz configurada para o domínio adicional.
+2. Faça uma cópia de segurança do site anterior antes de substituir arquivos.
+3. Envie o ZIP e extraia **seu conteúdo diretamente na raiz do domínio**. O resultado precisa ser `public_html/index.html`, junto das pastas `_next`, `media`, `brand` e das pastas de cada página. Não coloque tudo dentro de uma subpasta `out` ou `glx-hostgator`.
+4. Inclua o arquivo oculto `.htaccess` fornecido no pacote. Ele define o índice HTML, a página de erro 404 e regras opcionais de MIME, compressão e cache.
+5. Abra a home, `/portfolio/` e `/engenharia/` para conferir navegação, fotos e vídeos. Não é necessário Node.js, Next.js ou PHP no servidor para esta versão.
+
+Essas instruções consideram publicação na raiz do domínio, por exemplo `https://glxengenharia.com.br/`. Para publicar dentro de um caminho como `/site/`, ajuste o `basePath` antes de compilar.
+
+A HostGator documenta a raiz pública e o arquivo de entrada em [public_html](https://www.hostgator.com/help/article/public-html-folder).
+
+### Gerar um pacote novo
+
+Para quem vai alterar o código: instale as dependências como descrito acima e tenha Python 3 disponível para gerar o ZIP.
+
+```bash
+pnpm build:hostgator
+```
+
+O comando gera `out/index.html` e todas as páginas estáticas, valida as mídias e cria `dist/glx-hostgator.zip`. Para conferir localmente, use `python3 -m http.server 4173 --directory out`. Preserve todos os arquivos gerados, inclusive arquivos `.txt` usados pela navegação e a pasta `_next`.
 
 ## Publicar na Vercel a partir do GitHub
 
